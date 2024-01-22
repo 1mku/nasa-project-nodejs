@@ -1,6 +1,7 @@
 const fs = require('fs');
-const path = require('path');
 const { parse } = require('csv-parse');
+
+const { DATA_CSV_PATH } = require('../constants');
 
 const habitablePlanets = [];
 
@@ -10,11 +11,10 @@ function isHabitablePlanet(planet) {
         && planet.koi_prad < 1.6;
 }
 
-const dataCSVPath = path.join(__dirname, '..', '..', 'data', 'kepler_data.csv');
-console.log({ dataCSVPath });
+
 function loadPlanetsData() {
     return new Promise((resolve, reject) => {
-        fs.createReadStream(dataCSVPath)
+        fs.createReadStream(DATA_CSV_PATH)
             .pipe(parse({
                 comment: '#',
                 columns: true,
