@@ -2,15 +2,15 @@
   "name": "nasa-project",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "engines": {
+    "node": ">=20.0.0"
+  },
   "scripts": {
-    "build-client": "pnpm --prefix client build",
-    "install-server": "pnpm --prefix server install",
-    "install-client": "pnpm --prefix client install",
-    "install": "pnpm run install-client && pnpm run install-server",
-    "server": "pnpm --prefix server watch",
-    "client": "pnpm --prefix client dev",
-    "watch": "pnpm run server & pnpm run client",
+    "client:build": "pnpm -C packages/client run build",
+    "server:watch": "pnpm -C packages/server watch",
+    "server:test": "pnpm -C packages/server test",
+    "client:watch": "pnpm -C packages/client watch",
+    "dev": "pnpm -r --parallel --filter './packages/**' run watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
