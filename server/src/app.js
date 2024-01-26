@@ -6,6 +6,7 @@ const morgan = require('morgan');
 const { PUBLIC_FOLDER_PATH } = require('./constants');
 
 const planetsRouter = require('./routes/planets/planets.router');
+const launchesRouter = require('./routes/launches/launches.router');
 
 const app = express();
 
@@ -13,8 +14,12 @@ app.use(cors({ origin: 'http://localhost:3000' }));
 app.use(morgan('tiny'));
 app.use(express.json());
 app.use(express.static(PUBLIC_FOLDER_PATH));
-app.use(planetsRouter);
-app.get('/', (_req, res) => {
+
+// Routes
+app.use('/planets', planetsRouter);
+app.use('/launches', launchesRouter);
+
+app.get('/*', (_req, res) => {
     return res.sendFile(path.join(PUBLIC_FOLDER_PATH, 'index.html'))
 });
 
