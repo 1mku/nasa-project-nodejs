@@ -1,19 +1,20 @@
-const Clickable = (props) => {
-	const { children, sounds, onClick, ...rest } = props;
+import { useBleeps } from "@arwes/react";
+import { BleepNames } from "../settings";
 
-	// const clickWithSound = (e) => {
-	//   sounds.click && sounds.click.play();
-	//   onClick && onClick(e);
-	// };
+const Clickable = (props: {
+	children: React.ReactNode;
+	name?: BleepNames;
+	onClick?: React.MouseEventHandler<HTMLElement>;
+}) => {
+	const { children, name = "click", onClick } = props;
+	const bleeps = useBleeps<BleepNames>();
+	const clickWithSound = (e: React.MouseEvent<HTMLSpanElement, MouseEvent>) => {
+		bleeps[name]?.play();
+		onClick?.(e);
+	};
 
-	return (
-		<span
-			{...rest}
-			// onClick={clickWithSound}
-		>
-			{children}
-		</span>
-	);
+	// biome-ignore lint/a11y/useKeyWithClickEvents: <explanation>
+	return <span onClick={clickWithSound}>{children}</span>;
 };
 
 export default Clickable;

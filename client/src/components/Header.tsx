@@ -1,15 +1,44 @@
-import { Text, Animator } from "@arwes/react";
+import { Text, Animator, Animated } from "@arwes/react";
 import { Link } from "react-router-dom";
 import fav from "/favicon.png";
+import { useCallback } from "react";
+import useSound from "../hooks/useSound";
 
-const Header = (props) => {
-	const { classes = {} } = props;
+const links = [
+	{
+		title: "Launch",
+		to: "/launch",
+		icon: "check_circle_outline",
+	},
+	{
+		title: "Upcoming",
+		to: "/upcoming",
+		icon: "update",
+	},
+	{
+		title: "History",
+		to: "/history",
+		icon: "history",
+	},
+];
+const Header = () => {
+	const sound = useSound();
+	const getLinks = useCallback(() => {
+		return links.map((link) => (
+			<Animated key={link.to}>
+				<Link to={link.to} onClick={() => sound.click()}>
+					<i className="material-icons">check_circle_outline</i>
+					{link.title}
+				</Link>
+			</Animated>
+		));
+	}, [sound]);
+
 	return (
 		<header className="header">
 			<img
 				src={fav}
 				alt=""
-				className={classes.img}
 				style={{
 					margin: "15px 10px 15px 0",
 					height: "50px",
@@ -23,19 +52,7 @@ const Header = (props) => {
 					</Text>
 				</Animator>
 				<Animator>
-					<nav>
-						<Link className={classes.link} to="/launch">
-							<i className="material-icons">check_circle_outline</i>Launch
-						</Link>
-
-						<Link className={classes.link} to="/upcoming">
-							<i className="material-icons">update</i>Upcoming
-						</Link>
-
-						<Link className={classes.link} to="/history">
-							<i className="material-icons">history</i>History
-						</Link>
-					</nav>
+					<nav>{getLinks()}</nav>
 				</Animator>
 			</Animator>
 		</header>

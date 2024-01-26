@@ -1,8 +1,9 @@
 import { useMemo } from "react";
-import Centered from "../components/Centered";
-// import { Appear, Table, Paragraph } from "@arwes/react";
+import { Launch } from "../hooks/useLaunches";
 
-const History = (props) => {
+type Props = { launches: Launch[] };
+
+const History = (props: Props) => {
 	const tableBody = useMemo(() => {
 		return props.launches
 			?.filter((launch) => !launch.upcoming)
@@ -31,26 +32,19 @@ const History = (props) => {
 				year 2006.
 			</p>
 
-			{/* <Appear animate show={props.entered}>
-      
-      <Table animate>
-        <table style={{tableLayout: "fixed"}}>
-          <thead>
-            <tr>
-              <th style={{width: "2rem"}}></th>
-              <th style={{width: "3rem"}}>No.</th>
-              <th style={{width: "9rem"}}>Date</th>
-              <th>Mission</th>
-              <th style={{width: "7rem"}}>Rocket</th>
-              <th>Customers</th>
-            </tr>
-          </thead>
-          <tbody>
-            {tableBody}
-          </tbody>
-        </table>
-      </Table>
-    </Appear> */}
+			<table style={{ tableLayout: "fixed" }}>
+				<thead>
+					<tr>
+						<th style={{ width: "2rem" }} />
+						<th style={{ width: "3rem" }}>No.</th>
+						<th style={{ width: "9rem" }}>Date</th>
+						<th>Mission</th>
+						<th style={{ width: "7rem" }}>Rocket</th>
+						<th>Customers</th>
+					</tr>
+				</thead>
+				<tbody>{tableBody}</tbody>
+			</table>
 		</article>
 	);
 };
