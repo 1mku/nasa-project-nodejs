@@ -1,7 +1,7 @@
-const fs = require('fs');
-const { parse } = require('csv-parse');
+import fs from 'fs';
+import { parse } from 'csv-parse';
 
-const { DATA_CSV_PATH } = require('../constants');
+import { DATA_CSV_PATH } from '../constants.mjs';
 
 const habitablePlanets = [];
 
@@ -39,7 +39,7 @@ function getAllPlanets() {
     return habitablePlanets;
 }
 
-module.exports = {
+export {
     loadPlanetsData,
     getAllPlanets,
 }

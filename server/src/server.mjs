@@ -1,8 +1,8 @@
 
-const http = require('http');
-const app = require('./app');
+import http from 'http';
+import app from './app.mjs';
 
-const { loadPlanetsData } = require('./models/planets.model')
+import { loadPlanetsData } from './models/planets.model.mjs'
 
 const PORT = process.env.PORT || 8000;
 

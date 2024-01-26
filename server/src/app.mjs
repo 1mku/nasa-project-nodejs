@@ -1,12 +1,12 @@
-const express = require('express');
-const path = require('path');
-const cors = require('cors');
-const morgan = require('morgan');
+import express from 'express';
+import path from 'path';
+import cors from 'cors';
+import morgan from 'morgan';
 
-const { PUBLIC_FOLDER_PATH } = require('./constants');
+import { PUBLIC_FOLDER_PATH } from './constants.mjs';
 
-const planetsRouter = require('./routes/planets/planets.router');
-const launchesRouter = require('./routes/launches/launches.router');
+import planetsRouter from './routes/planets/planets.router.mjs';
+import launchesRouter from './routes/launches/launches.router.mjs';
 
 const app = express();
 
@@ -23,4 +23,4 @@ app.get('/*', (_req, res) => {
     return res.sendFile(path.join(PUBLIC_FOLDER_PATH, 'index.html'))
 });
 
-module.exports = app;
+export default app;

@@ -1,4 +1,4 @@
-const { getAllLaunches, addNewLaunch, existsLaunchWithId, abortLaunch } = require('../../models/launches.model')
+import { getAllLaunches, addNewLaunch, existsLaunchWithId, abortLaunch } from '../../models/launches.model.mjs'
 
 function httpGetAllLaunches(_req, res) {
     return res.status(200).json(getAllLaunches());
@@ -37,7 +37,7 @@ function httpAbortLaunch(req, res) {
     return res.status(200).json({ aborted: launch });
 }
 
-module.exports = {
+export {
     httpGetAllLaunches,
     httpAddNewLaunch,
     httpAbortLaunch

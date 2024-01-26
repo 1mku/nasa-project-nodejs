@@ -40,7 +40,7 @@ function abortLaunch(id) {
     return aborted;
 }
 
-module.exports = {
+export {
     getAllLaunches,
     addNewLaunch,
     existsLaunchWithId,
