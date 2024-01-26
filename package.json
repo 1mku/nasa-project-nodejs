@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build-client": "pnpm --prefix client build",
     "install-server": "pnpm --prefix server install",
     "install-client": "pnpm --prefix client install",
     "install": "pnpm run install-client && pnpm run install-server",
