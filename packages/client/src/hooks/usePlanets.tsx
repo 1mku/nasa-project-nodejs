@@ -1,5 +1,5 @@
-import { useCallback, useEffect, useState } from "react";
-import { httpGetPlanets } from "./requests";
+import { useCallback, useEffect, useState } from 'react';
+import { httpGetPlanets } from './requests';
 
 export type Planet = {
 	kepid: string;

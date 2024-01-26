@@ -1,24 +1,24 @@
-import { Text, Animator, Animated } from "@arwes/react";
-import { Link } from "react-router-dom";
-import fav from "/favicon.png";
-import { useCallback } from "react";
-import useSound from "../hooks/useSound";
+import { Text, Animator, Animated } from '@arwes/react';
+import { Link } from 'react-router-dom';
+import fav from '/favicon.png';
+import { useCallback } from 'react';
+import useSound from '../hooks/useSound';
 
 const links = [
 	{
-		title: "Launch",
-		to: "/launch",
-		icon: "check_circle_outline",
+		title: 'Launch',
+		to: '/launch',
+		icon: 'check_circle_outline',
 	},
 	{
-		title: "Upcoming",
-		to: "/upcoming",
-		icon: "update",
+		title: 'Upcoming',
+		to: '/upcoming',
+		icon: 'update',
 	},
 	{
-		title: "History",
-		to: "/history",
-		icon: "history",
+		title: 'History',
+		to: '/history',
+		icon: 'history',
 	},
 ];
 const Header = () => {
@@ -40,9 +40,9 @@ const Header = () => {
 				src={fav}
 				alt=""
 				style={{
-					margin: "15px 10px 15px 0",
-					height: "50px",
-					width: "auto",
+					margin: '15px 10px 15px 0',
+					height: '50px',
+					width: 'auto',
 				}}
 			/>
 			<Animator active={true} combine manager="sequence">

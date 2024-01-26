@@ -1,6 +1,6 @@
-import { Animator } from "@arwes/react";
-import { GridLines } from "@arwes/react";
-import { useState, useEffect } from "react";
+import { Animator } from '@arwes/react';
+import { GridLines } from '@arwes/react';
+import { useState, useEffect } from 'react';
 
 export default function BgGrid() {
 	const [active, setActive] = useState(true);
@@ -15,9 +15,9 @@ export default function BgGrid() {
 			<div
 				style={{
 					zIndex: -1,
-					position: "absolute",
-					width: "100%",
-					height: "100%",
+					position: 'absolute',
+					width: '100%',
+					height: '100%',
 				}}
 			>
 				<GridLines

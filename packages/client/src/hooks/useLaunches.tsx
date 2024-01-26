@@ -1,6 +1,6 @@
-import { useCallback, useEffect, useState } from "react";
-import { httpGetLaunches, httpSubmitLaunch, httpAbortLaunch } from "./requests";
-import useSound from "./useSound";
+import { useCallback, useEffect, useState } from 'react';
+import { httpGetLaunches, httpSubmitLaunch, httpAbortLaunch } from './requests';
+import useSound from './useSound';
 
 export type Launch = {
 	flightNumber: number;
@@ -44,11 +44,11 @@ function useLaunches() {
 			setPendingLaunch(true);
 			const data = new FormData(e.currentTarget);
 			const launchDate = new Date(
-				data.get("launch-day")?.toString() ?? "",
+				data.get('launch-day')?.toString() ?? '',
 			).toString();
-			const mission = data.get("mission-name")?.toString();
-			const rocket = data.get("rocket-name")?.toString();
-			const destination = data.get("planets-selector")?.toString();
+			const mission = data.get('mission-name')?.toString();
+			const rocket = data.get('rocket-name')?.toString();
+			const destination = data.get('planets-selector')?.toString();
 			const response = await httpSubmitLaunch({
 				launchDate,
 				mission,

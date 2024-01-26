@@ -20,7 +20,7 @@ app.use('/planets', planetsRouter);
 app.use('/launches', launchesRouter);
 
 app.get('/*', (_req, res) => {
-    return res.sendFile(path.join(PUBLIC_FOLDER_PATH, 'index.html'))
+	return res.sendFile(path.join(PUBLIC_FOLDER_PATH, 'index.html'));
 });
 
 export default app;

@@ -4,15 +4,15 @@ import {
 	BleepsProviderSettings,
 	createAppStylesBaseline,
 	createAppTheme,
-} from "@arwes/react";
+} from '@arwes/react';
 
 export const resources = {
 	background: {
-		small: "/img/background-small.jpg",
-		medium: "/img/background-medium.jpg",
-		large: "/img/background-large.jpg",
+		small: '/img/background-small.jpg',
+		medium: '/img/background-medium.jpg',
+		large: '/img/background-large.jpg',
 	},
-	pattern: "/img/glow.png",
+	pattern: '/img/glow.png',
 };
 
 export const sounds = {
@@ -21,36 +21,36 @@ export const sounds = {
 	},
 	players: {
 		click: {
-			sound: { src: ["/sound/click.mp3"] },
+			sound: { src: ['/sound/click.mp3'] },
 			settings: { oneAtATime: true },
 		},
 		typing: {
-			sound: { src: ["/sound/typing.mp3"] },
+			sound: { src: ['/sound/typing.mp3'] },
 			settings: { oneAtATime: true },
 		},
 		deploy: {
-			sound: { src: ["/sound/deploy.mp3"] },
+			sound: { src: ['/sound/deploy.mp3'] },
 			settings: { oneAtATime: true },
 		},
 		success: {
 			sound: {
-				src: ["/sound/success.mp3"],
+				src: ['/sound/success.mp3'],
 				volume: 0.2,
 			},
 			settings: { oneAtATime: true },
 		},
 		abort: {
-			sound: { src: ["/sound/abort.mp3"] },
+			sound: { src: ['/sound/abort.mp3'] },
 			settings: { oneAtATime: true },
 		},
 		warning: {
-			sound: { src: ["/sound/warning.mp3"] },
+			sound: { src: ['/sound/warning.mp3'] },
 			settings: { oneAtATime: true },
 		},
 	},
 };
 
-export type BleepNames = "click" | "intro" | "error";
+export type BleepNames = 'click' | 'intro' | 'error';
 export const bleepsSettings: BleepsProviderSettings<BleepNames> = {
 	// Shared global audio settings.
 	master: {
@@ -61,8 +61,8 @@ export const bleepsSettings: BleepsProviderSettings<BleepNames> = {
 		intro: {
 			sources: [
 				{
-					src: "https://arwes.dev/assets/sounds/intro.mp3",
-					type: "audio/mpeg",
+					src: 'https://arwes.dev/assets/sounds/intro.mp3',
+					type: 'audio/mpeg',
 				},
 			],
 		},
@@ -70,16 +70,16 @@ export const bleepsSettings: BleepsProviderSettings<BleepNames> = {
 		click: {
 			sources: [
 				{
-					src: "https://arwes.dev/assets/sounds/click.mp3",
-					type: "audio/mpeg",
+					src: 'https://arwes.dev/assets/sounds/click.mp3',
+					type: 'audio/mpeg',
 				},
 			],
 		},
 		error: {
 			sources: [
 				{
-					src: "https://arwes.dev/assets/sounds/error.mp3",
-					type: "audio/mpeg",
+					src: 'https://arwes.dev/assets/sounds/error.mp3',
+					type: 'audio/mpeg',
 				},
 			],
 		},
@@ -94,7 +94,7 @@ const theme: AppTheme = createAppTheme({
 		},
 		fontFamilies: {
 			title: 'Copperplate, Copper, "Comic Sans"',
-			body: "Tahoma, Techno, Trebuchet",
+			body: 'Tahoma, Techno, Trebuchet',
 		},
 	},
 });

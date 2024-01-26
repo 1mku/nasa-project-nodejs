@@ -1,7 +1,7 @@
-import { useMemo } from "react";
-import useLaunches from "../hooks/useLaunches";
-import { Planet } from "../hooks/usePlanets";
-import { Animated, Animator } from "@arwes/react";
+import { useMemo } from 'react';
+import useLaunches from '../hooks/useLaunches';
+import { Planet } from '../hooks/usePlanets';
+import { Animated, Animator } from '@arwes/react';
 
 type Props = { planets: Planet[] };
 const Launch = (props: Props) => {
@@ -15,7 +15,7 @@ const Launch = (props: Props) => {
 		));
 	}, [props.planets]);
 
-	const today = new Date().toISOString().split("T")[0];
+	const today = new Date().toISOString().split('T')[0];
 
 	const Loading = () => <div>Loading...</div>;
 	return (
@@ -47,9 +47,9 @@ const Launch = (props: Props) => {
 					<form
 						onSubmit={submitLaunch}
 						style={{
-							display: "inline-grid",
-							gridTemplateColumns: "auto auto",
-							gridGap: "10px 20px",
+							display: 'inline-grid',
+							gridTemplateColumns: 'auto auto',
+							gridGap: '10px 20px',
 						}}
 					>
 						<label htmlFor="launch-day">Launch Date</label>

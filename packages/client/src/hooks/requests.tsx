@@ -1,6 +1,6 @@
-import { Launch } from "./useLaunches";
+import { Launch } from './useLaunches';
 
-const API_URL = "http://localhost:8000";
+const API_URL = 'http://localhost:8000';
 
 // Load planets and return as JSON.
 async function httpGetPlanets() {
@@ -21,9 +21,9 @@ async function httpGetLaunches(): Promise<Launch[]> {
 async function httpSubmitLaunch(launch: Partial<Launch>) {
 	try {
 		return await fetch(`${API_URL}/launches`, {
-			method: "POST",
+			method: 'POST',
 			body: JSON.stringify(launch),
-			headers: { "Content-Type": "application/json" },
+			headers: { 'Content-Type': 'application/json' },
 		});
 	} catch (error) {
 		return {
@@ -35,7 +35,7 @@ async function httpSubmitLaunch(launch: Partial<Launch>) {
 async function httpAbortLaunch(id: number) {
 	try {
 		return await fetch(`${API_URL}/launches/${id}`, {
-			method: "DELETE",
+			method: 'DELETE',
 		});
 	} catch (error) {
 		return {

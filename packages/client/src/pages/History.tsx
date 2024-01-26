@@ -1,5 +1,5 @@
-import { useMemo } from "react";
-import { Launch } from "../hooks/useLaunches";
+import { useMemo } from 'react';
+import { Launch } from '../hooks/useLaunches';
 
 type Props = { launches: Launch[] };
 
@@ -11,7 +11,7 @@ const History = (props: Props) => {
 				return (
 					<tr key={String(launch.flightNumber)}>
 						<td>
-							<span style={{ color: launch.success ? "greenyellow" : "red" }}>
+							<span style={{ color: launch.success ? 'greenyellow' : 'red' }}>
 								█
 							</span>
 						</td>
@@ -19,7 +19,7 @@ const History = (props: Props) => {
 						<td>{new Date(launch.launchDate).toDateString()}</td>
 						<td>{launch.mission}</td>
 						<td>{launch.rocket}</td>
-						<td>{launch.customers?.join(", ")}</td>
+						<td>{launch.customers?.join(', ')}</td>
 					</tr>
 				);
 			});
@@ -32,14 +32,14 @@ const History = (props: Props) => {
 				year 2006.
 			</p>
 
-			<table style={{ tableLayout: "fixed" }}>
+			<table style={{ tableLayout: 'fixed' }}>
 				<thead>
 					<tr>
-						<th style={{ width: "2rem" }} />
-						<th style={{ width: "3rem" }}>No.</th>
-						<th style={{ width: "9rem" }}>Date</th>
+						<th style={{ width: '2rem' }} />
+						<th style={{ width: '3rem' }}>No.</th>
+						<th style={{ width: '9rem' }}>Date</th>
 						<th>Mission</th>
-						<th style={{ width: "7rem" }}>Rocket</th>
+						<th style={{ width: '7rem' }}>Rocket</th>
 						<th>Customers</th>
 					</tr>
 				</thead>

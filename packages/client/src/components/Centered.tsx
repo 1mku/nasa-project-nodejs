@@ -1,5 +1,5 @@
-import { FrameSVG, FrameSVGPathGeneric } from "@arwes/react";
-import { useMemo } from "react";
+import { FrameSVG, FrameSVGPathGeneric } from '@arwes/react';
+import { useMemo } from 'react';
 
 const Centered = (props: { children: React.ReactNode }) => {
 	const { children } = props;
@@ -7,47 +7,47 @@ const Centered = (props: { children: React.ReactNode }) => {
 		() => [
 			// Background shape.
 			{
-				name: "bg",
+				name: 'bg',
 				style: {
 					strokeWidth: 0,
-					fill: "hsl(180, 75%, 10%)",
-					filter: "drop-shadow(0 0 2px hsl(180, 75%, 10%))",
+					fill: 'hsl(180, 75%, 10%)',
+					filter: 'drop-shadow(0 0 2px hsl(180, 75%, 10%))',
 				},
 				path: [
-					["M", 20, 20],
-					["L", 20, "100% - 20"],
-					["L", "100% - 20", "100% - 20"],
-					["L", "100% - 20", 20],
+					['M', 20, 20],
+					['L', 20, '100% - 20'],
+					['L', '100% - 20', '100% - 20'],
+					['L', '100% - 20', 20],
 				],
 			},
 			// Top decoration.
 			{
-				name: "line",
+				name: 'line',
 				style: {
-					strokeWidth: "1",
-					stroke: "hsl(180, 75%, 50%)",
-					fill: "none",
-					filter: "drop-shadow(0 0 2px hsl(180, 75%, 50%))",
+					strokeWidth: '1',
+					stroke: 'hsl(180, 75%, 50%)',
+					fill: 'none',
+					filter: 'drop-shadow(0 0 2px hsl(180, 75%, 50%))',
 				},
 				path: [
-					["M", 10, 10],
-					["L", "100% - 10", 10],
-					["L", "100% - 10", 40],
+					['M', 10, 10],
+					['L', '100% - 10', 10],
+					['L', '100% - 10', 40],
 				],
 			},
 			// Bottom decoration.
 			{
-				name: "line",
+				name: 'line',
 				style: {
-					strokeWidth: "2",
-					stroke: "hsl(180, 75%, 50%)",
-					fill: "none",
-					filter: "drop-shadow(0 0 2px hsl(180, 75%, 50%))",
+					strokeWidth: '2',
+					stroke: 'hsl(180, 75%, 50%)',
+					fill: 'none',
+					filter: 'drop-shadow(0 0 2px hsl(180, 75%, 50%))',
 				},
 				path: [
-					["M", "100% - 10", "100% - 10"],
-					["L", 10, "100% - 10"],
-					["L", 10, "100% - 40"],
+					['M', '100% - 10', '100% - 10'],
+					['L', 10, '100% - 10'],
+					['L', 10, '100% - 40'],
 				],
 			},
 		],
@@ -57,7 +57,7 @@ const Centered = (props: { children: React.ReactNode }) => {
 	return (
 		<div
 			style={{
-				margin: "0 auto",
+				margin: '0 auto',
 				maxWidth: 800,
 			}}
 		>

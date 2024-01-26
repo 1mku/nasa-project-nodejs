@@ -1,34 +1,34 @@
-import { CSSProperties, type ReactElement } from "react";
-import { resources } from "../settings";
+import { CSSProperties, type ReactElement } from 'react';
+import { resources } from '../settings';
 
 const classes: Record<string, CSSProperties> = {
 	root: {
-		display: "block",
-		overflow: "hidden",
+		display: 'block',
+		overflow: 'hidden',
 
 		zIndex: 0,
 	},
 
 	layer1: {
-		display: "block",
-		position: "absolute",
-		overflow: "hidden",
+		display: 'block',
+		position: 'absolute',
+		overflow: 'hidden',
 		zIndex: -2,
 		inset: 0,
-		transformOrigin: "top",
-		transitionProperty: "opacity, filter",
-		transitionDuration: "0.2s",
-		transitionTimingFunction: "ease-out",
+		transformOrigin: 'top',
+		transitionProperty: 'opacity, filter',
+		transitionDuration: '0.2s',
+		transitionTimingFunction: 'ease-out',
 	},
 
 	layer1Image: {
-		display: "block",
-		position: "absolute",
+		display: 'block',
+		position: 'absolute',
 		inset: -1,
-		width: "100%",
-		height: "100%",
-		objectFit: "cover",
-		objectPosition: "center",
+		width: '100%',
+		height: '100%',
+		objectFit: 'cover',
+		objectPosition: 'center',
 	},
 
 	layer2: {

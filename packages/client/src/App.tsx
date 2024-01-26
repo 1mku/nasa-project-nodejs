@@ -1,15 +1,15 @@
-import { Routes, Route, BrowserRouter as Router } from "react-router-dom";
-import AppLayout from "./pages/AppLayout";
-import { type CSSObject, Global } from "@emotion/react";
-import { AnimatorGeneralProvider, BleepsProvider } from "@arwes/react";
+import { Routes, Route, BrowserRouter as Router } from 'react-router-dom';
+import AppLayout from './pages/AppLayout';
+import { type CSSObject, Global } from '@emotion/react';
+import { AnimatorGeneralProvider, BleepsProvider } from '@arwes/react';
 
-import Launch from "./pages/Launch";
-import History from "./pages/History";
-import Upcoming from "./pages/Upcoming";
+import Launch from './pages/Launch';
+import History from './pages/History';
+import Upcoming from './pages/Upcoming';
 
-import usePlanets from "./hooks/usePlanets";
-import useLaunches from "./hooks/useLaunches";
-import { animatorsSettings, bleepsSettings, stylesBaseline } from "./settings";
+import usePlanets from './hooks/usePlanets';
+import useLaunches from './hooks/useLaunches';
+import { animatorsSettings, bleepsSettings, stylesBaseline } from './settings';
 
 const App = () => {
 	const { launches, abortLaunch } = useLaunches();

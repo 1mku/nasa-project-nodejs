@@ -1,8 +1,8 @@
-import { useMemo } from "react";
-import { Link } from "react-router-dom";
+import { useMemo } from 'react';
+import { Link } from 'react-router-dom';
 
-import Clickable from "../components/Clickable";
-import { Launch } from "../hooks/useLaunches";
+import Clickable from '../components/Clickable';
+import { Launch } from '../hooks/useLaunches';
 
 const Upcoming = (props: {
 	launches: Launch[];
@@ -21,7 +21,7 @@ const Upcoming = (props: {
 								<Link
 									to="#"
 									onClick={() => abortLaunch?.(launch.flightNumber)}
-									children={"✖"}
+									children={'✖'}
 								/>
 							</Clickable>
 						</td>
@@ -43,14 +43,14 @@ const Upcoming = (props: {
 			</p>
 			<p>Warning! Clicking on the ✖ aborts the mission.</p>
 
-			<table style={{ tableLayout: "fixed" }}>
+			<table style={{ tableLayout: 'fixed' }}>
 				<thead>
 					<tr>
-						<th style={{ width: "3rem" }} />
-						<th style={{ width: "3rem" }}>No.</th>
-						<th style={{ width: "10rem" }}>Date</th>
-						<th style={{ width: "11rem" }}>Mission</th>
-						<th style={{ width: "11rem" }}>Rocket</th>
+						<th style={{ width: '3rem' }} />
+						<th style={{ width: '3rem' }}>No.</th>
+						<th style={{ width: '10rem' }}>Date</th>
+						<th style={{ width: '11rem' }}>Mission</th>
+						<th style={{ width: '11rem' }}>Rocket</th>
 						<th>Destination</th>
 					</tr>
 				</thead>
