@@ -1,6 +1,5 @@
 import { expect, it, describe } from 'vitest';
 
-
 describe('Test /GET launches', () => {
     it('should respond with 200', () => {
         const response = 200;
