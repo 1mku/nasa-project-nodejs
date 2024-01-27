@@ -1,23 +1,24 @@
 {
-  "name": "nasa-project",
-  "version": "1.0.0",
-  "description": "",
-  "engines": {
-    "node": ">=20.0.0"
-  },
-  "scripts": {
-    "client:build": "pnpm -C packages/client run build",
-    "server:watch": "pnpm -C packages/server watch",
-    "server:test": "pnpm -C packages/server test",
-    "client:watch": "pnpm -C packages/client watch",
-    "dev": "pnpm -r --parallel --filter './packages/**' run watch",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "format": "pnpm dlx @biomejs/biome format --write ./packages"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "@biomejs/biome": "1.5.3"
-  }
+	"name": "nasa-project",
+	"version": "1.0.0",
+	"description": "",
+	"engines": {
+		"node": ">=20.0.0"
+	},
+	"scripts": {
+		"client:build": "pnpm -C packages/client run build",
+		"server:watch": "pnpm -C packages/server watch",
+		"server:test": "pnpm -C packages/server test",
+		"client:watch": "pnpm -C packages/client watch",
+		"dev": "pnpm -r --parallel --filter './packages/**' run watch",
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"format": "pnpm dlx @biomejs/biome format --write ./packages",
+		"deploy": "pnpm run client:build && pnpm -C packages/server cluster"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"@biomejs/biome": "1.5.3"
+	}
 }
