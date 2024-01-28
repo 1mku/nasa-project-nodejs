@@ -14,7 +14,7 @@ function isHabitablePlanet(planet) {
 	);
 }
 
-function loadPlanetsData() {
+export function loadPlanetsData() {
 	return new Promise((resolve, reject) => {
 		fs.createReadStream(DATA_CSV_PATH)
 			.pipe(
