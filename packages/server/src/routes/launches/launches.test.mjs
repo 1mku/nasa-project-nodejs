@@ -14,7 +14,7 @@ describe('Test /GET launches', () => {
 describe('Test /POST launches', () => {
 	const dataWithoutLaunchDate = {
 		mission: 'USS Enterprise',
-		destination: 'Kepler-186 f',
+		target: 'Kepler-186 f',
 		rocket: 'NCC 1771-D'
 	}
 	const dataWithLaunchDate = {
