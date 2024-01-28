@@ -7,7 +7,7 @@ export type Launch = {
 	mission: string;
 	rocket: string;
 	launchDate: string;
-	destination: string;
+	target: string;
 	customers: [string];
 	upcoming: boolean;
 	success: boolean;
@@ -16,7 +16,7 @@ export type Launch = {
 	// "mission": "Kepler Exploration X",
 	// "rocket": "Explorer IS1",
 	// "launchDate": "2030-12-27T05:00:00.000Z",
-	// "destination": "Kepler-442 b",
+	// "target": "Kepler-442 b",
 	// "customer": [
 	// 	"NASA"
 	// ],
@@ -48,12 +48,12 @@ function useLaunches() {
 			).toString();
 			const mission = data.get('mission-name')?.toString();
 			const rocket = data.get('rocket-name')?.toString();
-			const destination = data.get('planets-selector')?.toString();
+			const target = data.get('planets-selector')?.toString();
 			const response = await httpSubmitLaunch({
 				launchDate,
 				mission,
 				rocket,
-				destination,
+				target,
 			});
 
 			const success = response.ok;

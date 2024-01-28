@@ -29,7 +29,7 @@ const Upcoming = (props: {
 						<td children={new Date(launch.launchDate).toDateString()} />
 						<td children={launch.mission} />
 						<td children={launch.rocket} />
-						<td children={launch.destination} />
+						<td children={launch.target} />
 					</tr>
 				);
 			});
