@@ -55,10 +55,8 @@ async function savePlanet(planet) {
 	}
 }
 
-async function getAllPlanets() {
+export async function getAllPlanets() {
 	return await Planet.find({}, {
 		__v: 0
 	});
 }
-
-export { loadPlanetsData, getAllPlanets };
