@@ -5,7 +5,6 @@
 html, body {
     margin: 0;
     min-height: 100vh;
-    background-color: transparent !important;
 }
 
 #root {
@@ -13,30 +12,30 @@ html, body {
 }
 
 main {
-    z-index: 0;
     position: relative;
     margin: 0 auto;
     max-width: var(--max-content-width);
     min-height: 450px;
+    z-index: 2;
 }
 
 footer {
     margin: 0 auto;
     max-width: var(--max-content-width);
-
 }
 
 .header {
+    position: relative;
     display: flex;
     align-items: center;
     margin: 0 auto;
     max-width: var(--max-content-width);
+    z-index: 2;
 }
 
 .header nav {
     display: flex;
     margin: 0 2rem;
-
 }
 
 .header nav a {

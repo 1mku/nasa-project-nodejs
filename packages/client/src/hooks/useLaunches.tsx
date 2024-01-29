@@ -1,6 +1,10 @@
 import { useCallback, useEffect, useState } from 'react';
-import { httpGetLaunches, httpSubmitLaunch, httpAbortLaunch } from './requests';
-import useSound from './useSound';
+import {
+	httpGetLaunches,
+	httpSubmitLaunch,
+	httpAbortLaunch,
+} from '@/hooks/requests';
+import useSound from '@/hooks/useSound';
 
 export type Launch = {
 	flightNumber: number;

@@ -6,7 +6,10 @@
 	"linter": {
 		"enabled": true,
 		"rules": {
-			"recommended": true
+			"recommended": true,
+			"correctness": {
+				"noChildrenProp": "off"
+			}
 		}
 	},
 	"formatter": {
@@ -20,8 +23,8 @@
 	},
 	"javascript": {
 		"formatter": {
-			"semicolons":"always",
-			"quoteStyle":"single"
+			"semicolons": "always",
+			"quoteStyle": "single"
 		}
 	}
 }

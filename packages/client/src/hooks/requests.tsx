@@ -1,4 +1,4 @@
-import { Launch } from './useLaunches';
+import { Launch } from '@/hooks/useLaunches';
 
 const API_URL = 'http://localhost:8000/v1';
 

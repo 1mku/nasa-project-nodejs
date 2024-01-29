@@ -1,6 +1,6 @@
 import { useMemo } from 'react';
-import useLaunches from '../hooks/useLaunches';
-import { Planet } from '../hooks/usePlanets';
+import useLaunches from '@/hooks/useLaunches';
+import { Planet } from '@/hooks/usePlanets';
 import { Animated, Animator } from '@arwes/react';
 
 type Props = { planets: Planet[] };

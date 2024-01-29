@@ -6,13 +6,16 @@
 		"node": ">=20.0.0"
 	},
 	"scripts": {
-		"client:build": "pnpm -C packages/client run build",
-		"server:watch": "pnpm -C packages/server watch",
-		"server:test": "pnpm -C packages/server test",
-		"client:watch": "pnpm -C packages/client watch",
 		"dev": "pnpm -r --parallel --filter './packages/**' run watch",
-		"test": "echo \"Error: no test specified\" && exit 1",
-		"format": "pnpm dlx @biomejs/biome format --write ./packages",
+		"client:build": "pnpm -C packages/client run build",
+		"client:watch": "pnpm -C packages/client watch",
+		"server:watch": "pnpm -C packages/server watch",
+		"client:lint": "pnpm -C packages/client lint",
+		"server:lint": "pnpm -C packages/server lint",
+		"server:test": "pnpm -C packages/server test",
+		"lint": "pnpm -r --parallel --filter './packages/**' run lint",
+		"test": "pnpm -r --parallel --filter './packages/**' run test",
+		"format": "pnpm -r --parallel --filter './packages/**' run format",
 		"deploy": "pnpm run client:build && pnpm -C packages/server cluster"
 	},
 	"keywords": [],

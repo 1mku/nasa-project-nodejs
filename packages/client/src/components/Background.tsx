@@ -13,7 +13,9 @@ const classes: Record<string, CSSProperties> = {
 		display: 'block',
 		position: 'absolute',
 		overflow: 'hidden',
-		zIndex: -2,
+		top: 0,
+		bottom: 0,
+		zIndex: 1,
 		inset: 0,
 		transformOrigin: 'top',
 		transitionProperty: 'opacity, filter',
@@ -32,11 +34,11 @@ const classes: Record<string, CSSProperties> = {
 	},
 
 	layer2: {
-		zIndex: 1,
+		zIndex: 2,
 	},
 
 	layer3: {
-		zIndex: 1,
+		zIndex: 3,
 	},
 };
 
