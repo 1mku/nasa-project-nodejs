@@ -2,8 +2,7 @@ import { expect, it, describe, beforeAll, afterAll } from 'vitest';
 import request from 'supertest';
 import app from '../../app.mjs';
 import { mongoConnect, mongoDisconnect } from '../../services/mongo.mjs';
-import { loadPlanetsData } from '../../models/planets.model.mjs'
-
+import { loadPlanetsData } from '../../models/planets.model.mjs';
 
 describe('Launches API', () => {
 	beforeAll(async () => {
@@ -28,8 +27,8 @@ describe('Launches API', () => {
 		const dataWithoutLaunchDate = {
 			mission: 'USS Enterprise',
 			target: 'Kepler-442 b',
-			rocket: 'NCC 1771-D'
-		}
+			rocket: 'NCC 1771-D',
+		};
 		const dataWithLaunchDate = {
 			...dataWithoutLaunchDate,
 			launchDate: 'January 7, 2033',

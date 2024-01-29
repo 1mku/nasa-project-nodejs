@@ -44,19 +44,23 @@ async function savePlanet(planet) {
 	try {
 		await Planet.findOneAndUpdate(
 			{
-				kepler_name: planet.kepler_name
+				kepler_name: planet.kepler_name,
 			},
 			{
-				kepler_name: planet.kepler_name
+				kepler_name: planet.kepler_name,
 			},
-			{ upsert: true })
+			{ upsert: true },
+		);
 	} catch (error) {
 		console.log('Could not save planet', error);
 	}
 }
 
 export async function getAllPlanets() {
-	return await Planet.find({}, {
-		__v: 0
-	});
+	return await Planet.find(
+		{},
+		{
+			__v: 0,
+		},
+	);
 }

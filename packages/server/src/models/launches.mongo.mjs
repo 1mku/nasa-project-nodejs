@@ -7,7 +7,7 @@ export const launchesSchema = new mongoose.Schema({
 	},
 	launchDate: {
 		type: Date,
-		required: true
+		required: true,
 	},
 	mission: {
 		type: String,
@@ -19,7 +19,7 @@ export const launchesSchema = new mongoose.Schema({
 	},
 	upcoming: {
 		type: Boolean,
-		required: true
+		required: true,
 	},
 	success: {
 		type: Boolean,
@@ -28,9 +28,9 @@ export const launchesSchema = new mongoose.Schema({
 	},
 	target: {
 		type: String,
-		required: true
+		required: true,
 	},
-	customers: [String]
+	customers: [String],
 });
 
 export const Launch = mongoose.model('Launch', launchesSchema);
