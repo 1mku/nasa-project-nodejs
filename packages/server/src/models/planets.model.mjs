@@ -3,7 +3,7 @@ import { parse } from 'csv-parse';
 
 import { Planet } from './planets.mongo.mjs';
 
-import { DATA_CSV_PATH } from '../constants.mjs';
+import { DATA_CSV_PATH } from '#constants.mjs';
 
 function isHabitablePlanet(planet) {
 	return (

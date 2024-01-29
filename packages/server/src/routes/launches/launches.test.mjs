@@ -1,8 +1,9 @@
 import { expect, it, describe, beforeAll, afterAll } from 'vitest';
 import request from 'supertest';
-import app from '../../app.mjs';
-import { mongoConnect, mongoDisconnect } from '../../services/mongo.mjs';
-import { loadPlanetsData } from '../../models/planets.model.mjs';
+
+import app from '#/app.mjs';
+import { mongoConnect, mongoDisconnect } from '#services/mongo.mjs';
+import { loadPlanetsData } from '#models/planets.model.mjs';
 
 describe('Launches API', () => {
 	beforeAll(async () => {

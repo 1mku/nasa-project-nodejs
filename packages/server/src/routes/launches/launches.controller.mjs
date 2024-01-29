@@ -3,7 +3,7 @@ import {
 	scheduleNewLaunch,
 	existsLaunchWithId,
 	abortLaunchById,
-} from '../../models/launches.model.mjs';
+} from '#models/launches.model.mjs';
 
 async function httpGetAllLaunches(_req, res) {
 	return res.status(200).json(await getAllLaunches());

@@ -1,10 +1,10 @@
 import { env } from 'node:process';
 import http from 'http';
 
-import app from './app.mjs';
-import { mongoConnect } from './services/mongo.mjs';
-import { loadPlanetsData } from './models/planets.model.mjs';
-import { loadLaunchData } from './models/launches.model.mjs';
+import app from '#app.mjs';
+import { mongoConnect } from '#services/mongo.mjs';
+import { loadPlanetsData } from '#models/planets.model.mjs';
+import { loadLaunchData } from '#models/launches.model.mjs';
 
 const PORT = env.PORT || 8000;
 

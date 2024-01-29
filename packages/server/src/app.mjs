@@ -3,9 +3,9 @@ import path from 'path';
 import cors from 'cors';
 import morgan from 'morgan';
 
-import { PUBLIC_FOLDER_PATH } from './constants.mjs';
+import { PUBLIC_FOLDER_PATH } from '#constants.mjs';
 
-import { api } from './routes/api.mjs';
+import { api } from '#routes/api.mjs';
 
 const app = express();
 

@@ -1,10 +1,8 @@
 import axios from 'axios';
+
 import { Launch } from './launches.mongo.mjs';
 import { Planet } from './planets.mongo.mjs';
-
-const DEFAULT_FLIGHT_NUMBER = 100;
-
-const SPACEX_API_URL = 'https://api.spacexdata.com/v4/launches/query';
+import { DEFAULT_FLIGHT_NUMBER, SPACEX_API_URL } from '#constants.mjs';
 
 async function populateLaunches() {
 	console.log('Downloading launch data...');
