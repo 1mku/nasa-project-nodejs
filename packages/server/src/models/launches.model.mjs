@@ -68,8 +68,8 @@ async function loadLaunchData() {
 	}
 }
 
-async function getAllLaunches() {
-	return Launch.find({}, { __v: 0 });
+async function getAllLaunches(skip, limit) {
+	return Launch.find({}, { __v: 0 }).sort({ flightNumber: 1 }).skip(skip).limit(limit);
 }
 
 async function getLatestFlightNumber() {
