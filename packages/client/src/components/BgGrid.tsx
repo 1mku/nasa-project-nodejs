@@ -14,7 +14,7 @@ export default function BgGrid() {
 		<Animator active={active} duration={{ enter: 0.5, exit: 0.5 }}>
 			<div
 				style={{
-					zIndex: -1,
+					zIndex: 0,
 					position: 'absolute',
 					width: '100%',
 					height: '100%',

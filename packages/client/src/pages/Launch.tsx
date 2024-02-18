@@ -1,7 +1,7 @@
 import { useMemo } from 'react';
 import useLaunches from '@/hooks/useLaunches';
 import { Planet } from '@/hooks/usePlanets';
-import { Animated, Animator } from '@arwes/react';
+import { Animator, Text } from '@arwes/react';
 
 type Props = { planets: Planet[] };
 const Launch = (props: Props) => {
@@ -19,31 +19,36 @@ const Launch = (props: Props) => {
 
 	const Loading = () => <div>Loading...</div>;
 	return (
-		<div>
+		<Animator merge combine manager="stagger">
 			<Animator>
-				<Animated
-					animated={{
-						initialStyle: { x: -100, opacity: 0 },
-						transitions: {
-							entering: { x: [-100, 0], opacity: 1 },
-						},
-					}}
-				>
-					<p>
-						Schedule a mission launch for interstellar travel to one of the
-						Kepler Exoplanets.
-					</p>
-					<p>
-						Only confirmed planets matching the following criteria are available
-						for the earliest scheduled missions:
-					</p>
-					<ul>
-						<li>Planetary radius &lt; 1.6 times Earth's radius</li>
-						<li>
-							Effective stellar flux &gt; 0.36 times Earth's value and &lt; 1.11
-							times Earth's value
-						</li>
-					</ul>
+				<Text as="h1">
+					Futuristic science fiction user interface web framework.
+				</Text>
+			</Animator>
+			<Animator>
+				<Text as="p">
+					Schedule a mission launch for interstellar travel to one of the Kepler
+					Exoplanets.
+				</Text>
+			</Animator>
+			<Animator>
+				<Text>
+					Only confirmed planets matching the following criteria are available
+					for the earliest scheduled missions:
+				</Text>
+			</Animator>
+
+			<Animator>
+				<Text as="ul" style={{ marginBottom: '2rem' }}>
+					<Text as="li">Planetary radius &lt; 1.6 times Earth's radius</Text>
+					<Text as="li">
+						Effective stellar flux &gt; 0.36 times Earth's value and &lt; 1.11
+						times Earth's value
+					</Text>
+				</Text>
+			</Animator>
+			<Animator>
+				<Text as="div">
 					<form
 						onSubmit={submitLaunch}
 						style={{
@@ -81,9 +86,9 @@ const Launch = (props: Props) => {
 
 						{isPendingLaunch && <Loading />}
 					</form>
-				</Animated>
+				</Text>
 			</Animator>
-		</div>
+		</Animator>
 	);
 };
 

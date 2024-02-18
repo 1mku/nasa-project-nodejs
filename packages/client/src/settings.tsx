@@ -86,7 +86,7 @@ export const bleepsSettings: BleepsProviderSettings<BleepNames> = {
 	},
 };
 
-const theme: AppTheme = createAppTheme({
+export const theme: AppTheme = createAppTheme({
 	settings: {
 		hues: {
 			primary: 200,

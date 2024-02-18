@@ -11,11 +11,11 @@ const classes: Record<string, CSSProperties> = {
 
 	layer1: {
 		display: 'block',
-		position: 'absolute',
+		position: 'fixed',
 		overflow: 'hidden',
 		top: 0,
 		bottom: 0,
-		zIndex: 1,
+		zIndex: 0,
 		inset: 0,
 		transformOrigin: 'top',
 		transitionProperty: 'opacity, filter',

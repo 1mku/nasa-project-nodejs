@@ -1,4 +1,4 @@
-import { Text, Animator, Animated } from '@arwes/react';
+import { Text, Animated } from '@arwes/react';
 import { Link } from 'react-router-dom';
 import fav from '/favicon.png';
 import { useCallback } from 'react';
@@ -45,16 +45,11 @@ const Header = () => {
 					width: 'auto',
 				}}
 			/>
-			<Animator active={true} combine manager="sequence">
-				<Animator>
-					<Text as="h1" style={{ margin: 0 }}>
-						NASA Mission Control
-					</Text>
-				</Animator>
-				<Animator>
-					<nav>{getLinks()}</nav>
-				</Animator>
-			</Animator>
+
+			<Text as="h1" style={{ margin: 0 }}>
+				NASA Mission Control
+			</Text>
+			<nav children={getLinks()} />
 		</header>
 	);
 };
