@@ -5,7 +5,7 @@
 	"main": "server.mjs",
 	"type": "module",
 	"scripts": {
-		"test": "vitest",
+		"test": "vitest --run",
 		"coverage": "vitest run --coverage",
 		"watch": "nodemon --env-file=.env src/server.mjs",
 		"start": "node --env-file=.env src/server.mjs",
