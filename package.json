@@ -9,6 +9,7 @@
 		"dev": "pnpm -r --parallel --filter './packages/**' run watch",
 		"client:build": "pnpm -C packages/client run build",
 		"client:watch": "pnpm -C packages/client watch",
+		"server:start": "pnpm -C packages/server start",
 		"server:watch": "pnpm -C packages/server watch",
 		"client:lint": "pnpm -C packages/client lint",
 		"server:lint": "pnpm -C packages/server lint",
