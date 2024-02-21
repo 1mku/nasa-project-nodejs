@@ -5,8 +5,8 @@
 	"type": "module",
 	"scripts": {
 		"watch": "vite",
-		"build": "tsc && vite build",
-		"lint": "pnpm dlx @biomejs/biome lint .",
+		"build": "vite build",
+		"lint": "pnpm dlx @biomejs/biome lint . && pnpm exec tsc",
 		"format": "pnpm dlx @biomejs/biome format --write .",
 		"preview": "vite preview"
 	},

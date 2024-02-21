@@ -6,6 +6,7 @@ jobs:
     strategy:
       matrix:
         node-version: [20]
+        mongodb-version: ["6.0"]
     steps:
       - uses: actions/checkout@v3
       - uses: pnpm/action-setup@v3
@@ -16,7 +17,13 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           cache: "pnpm"
-      - name: Install dependencies
-        run: pnpm install
-      - name: Build client
-        run: pnpm client:build
+      - name: Start MongoDB
+        uses: supercharge/mongodb-github-action@1.10.0
+        with:
+          mongodb-version: ${{ matrix.mongodb-version }}
+      - run: pnpm install
+      - run: pnpm lint
+      - run: pnpm test
+        env:
+          CI: true
+          VITE_MONGO_URL: mongodb://localhost/nasa
