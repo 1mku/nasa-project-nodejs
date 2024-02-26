@@ -46,7 +46,7 @@ const Header = () => {
 				}}
 			/>
 
-			<Text as="h1" style={{ margin: 0 }}>
+			<Text className="title" as="h1" style={{ margin: 0 }}>
 				NASA Mission Control
 			</Text>
 			<nav children={getLinks()} />

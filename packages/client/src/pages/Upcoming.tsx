@@ -42,20 +42,21 @@ const Upcoming = (props: {
 				Zero to Mastery rockets.
 			</p>
 			<p>Warning! Clicking on the ✖ aborts the mission.</p>
-
-			<table style={{ tableLayout: 'fixed' }}>
-				<thead>
-					<tr>
-						<th style={{ width: '3rem' }} />
-						<th style={{ width: '3rem' }}>No.</th>
-						<th style={{ width: '10rem' }}>Date</th>
-						<th style={{ width: '11rem' }}>Mission</th>
-						<th style={{ width: '11rem' }}>Rocket</th>
-						<th>Destination</th>
-					</tr>
-				</thead>
-				<tbody>{tableBody}</tbody>
-			</table>
+			<div style={{ overflow: 'auto' }}>
+				<table style={{ tableLayout: 'fixed' }}>
+					<thead>
+						<tr>
+							<th style={{ width: '3rem' }} />
+							<th style={{ width: '3rem' }}>No.</th>
+							<th style={{ width: '10rem' }}>Date</th>
+							<th style={{ width: '11rem' }}>Mission</th>
+							<th style={{ width: '11rem' }}>Rocket</th>
+							<th>Destination</th>
+						</tr>
+					</thead>
+					<tbody>{tableBody}</tbody>
+				</table>
+			</div>
 		</div>
 	);
 	//   <Table animate show={entered}>

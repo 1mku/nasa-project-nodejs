@@ -2,14 +2,17 @@
     --max-content-width: 800px;
 }
 
-html, body {
+html,
+body {
     margin: 0;
     min-height: 100vh;
+    width: 100%;
 }
 
 #root {
     position: relative;
     min-height: 100vh;
+    width: 100%;
 }
 
 main {
@@ -30,16 +33,31 @@ footer {
     display: flex;
     align-items: center;
     margin: 0 auto;
+    padding: 0 0.5rem;
     max-width: var(--max-content-width);
     z-index: 2;
 }
 
+.header .title {
+    display: none;
+}
+
 .header nav {
     display: flex;
-    margin: 0 2rem;
+    margin: 0.5rem 2rem;
 }
 
 .header nav a {
     display: flex;
-    margin-right: 2rem;
+    margin-right: 0.5rem;
+}
+
+@media (width >=720px) {
+    .header .title {
+        display: block;
+    }
+
+    .header nav a {
+        margin-right: 2rem;
+    }
 }

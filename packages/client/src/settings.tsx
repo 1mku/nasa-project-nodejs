@@ -8,7 +8,7 @@ import {
 
 export const resources = {
 	background: {
-		small: '/img/background-small.jpg',
+		small: '/img/background.jpg',
 		medium: '/img/background-medium.jpg',
 		large: '/img/background-large.jpg',
 	},

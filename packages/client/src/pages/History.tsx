@@ -32,19 +32,21 @@ const History = (props: Props) => {
 				year 2006.
 			</p>
 
-			<table style={{ tableLayout: 'fixed' }}>
-				<thead>
-					<tr>
-						<th style={{ width: '2rem' }} />
-						<th style={{ width: '3rem' }}>No.</th>
-						<th style={{ width: '9rem' }}>Date</th>
-						<th>Mission</th>
-						<th style={{ width: '7rem' }}>Rocket</th>
-						<th>Customers</th>
-					</tr>
-				</thead>
-				<tbody>{tableBody}</tbody>
-			</table>
+			<div style={{ overflow: 'auto' }}>
+				<table style={{ tableLayout: 'fixed' }}>
+					<thead>
+						<tr>
+							<th style={{ width: '2rem' }} />
+							<th style={{ width: '3rem' }}>No.</th>
+							<th style={{ width: '9rem' }}>Date</th>
+							<th style={{ width: '9rem' }}>Mission</th>
+							<th style={{ width: '7rem' }}>Rocket</th>
+							<th style={{ width: '9rem' }}>Customers</th>
+						</tr>
+					</thead>
+					<tbody>{tableBody}</tbody>
+				</table>
+			</div>
 		</article>
 	);
 };
