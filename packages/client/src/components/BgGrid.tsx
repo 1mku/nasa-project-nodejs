@@ -1,6 +1,5 @@
-import { Animator } from '@arwes/react';
-import { GridLines } from '@arwes/react';
 import { useState, useEffect } from 'react';
+import { Animator, GridLines } from '@arwes/react';
 
 export default function BgGrid() {
 	const [active, setActive] = useState(true);

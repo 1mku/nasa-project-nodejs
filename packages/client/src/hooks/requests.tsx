@@ -1,5 +1,5 @@
 import { API_URL } from '@/constants';
-import { Launch } from '@/hooks/useLaunches';
+import type { Launch } from '@/hooks/useLaunches';
 
 // Load planets and return as JSON.
 async function httpGetPlanets() {

@@ -1,5 +1,5 @@
 import { useBleeps } from '@arwes/react';
-import { BleepNames } from '../settings';
+import type { BleepNames } from '@/settings';
 
 export default function useSound() {
 	const bleeps = useBleeps<BleepNames>();

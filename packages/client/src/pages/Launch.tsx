@@ -1,7 +1,7 @@
 import { useMemo } from 'react';
 import useLaunches from '@/hooks/useLaunches';
-import { Planet } from '@/hooks/usePlanets';
 import { Animator, Text } from '@arwes/react';
+import type { Planet } from '@/hooks/usePlanets';
 
 type Props = { planets: Planet[] };
 const Launch = (props: Props) => {

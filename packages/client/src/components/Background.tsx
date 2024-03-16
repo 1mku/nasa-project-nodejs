@@ -1,4 +1,4 @@
-import { CSSProperties, type ReactElement } from 'react';
+import type { CSSProperties, ReactElement } from 'react';
 import { resources } from '../settings';
 
 const classes: Record<string, CSSProperties> = {

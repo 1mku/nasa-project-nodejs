@@ -2,7 +2,7 @@ import { useMemo } from 'react';
 import { Link } from 'react-router-dom';
 
 import Clickable from '@/components/Clickable';
-import { Launch } from '@/hooks/useLaunches';
+import type { Launch } from '@/hooks/useLaunches';
 
 const Upcoming = (props: {
 	launches: Launch[];
