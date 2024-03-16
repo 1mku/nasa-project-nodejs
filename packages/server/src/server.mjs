@@ -1,5 +1,5 @@
 import { env } from 'node:process';
-import http from 'http';
+import http from 'node:http';
 
 import app from '#app.mjs';
 import { mongoConnect } from '#services/mongo.mjs';

@@ -1,5 +1,5 @@
 import { useMemo } from 'react';
-import { Launch } from '@/hooks/useLaunches';
+import type { Launch } from '@/hooks/useLaunches';
 
 type Props = { launches: Launch[] };
 

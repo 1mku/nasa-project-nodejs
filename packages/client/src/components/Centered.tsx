@@ -1,5 +1,5 @@
-import { FrameSVG, FrameSVGPathGeneric } from '@arwes/react';
 import { useMemo } from 'react';
+import { FrameSVG, type FrameSVGPathGeneric } from '@arwes/react';
 
 const Centered = (props: { children: React.ReactNode }) => {
 	const { children } = props;

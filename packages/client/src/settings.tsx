@@ -1,7 +1,7 @@
 import {
-	AnimatorGeneralProviderSettings,
-	AppTheme,
-	BleepsProviderSettings,
+	type AnimatorGeneralProviderSettings,
+	type AppTheme,
+	type BleepsProviderSettings,
 	createAppStylesBaseline,
 	createAppTheme,
 } from '@arwes/react';

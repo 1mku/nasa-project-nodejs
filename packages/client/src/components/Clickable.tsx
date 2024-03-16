@@ -1,5 +1,5 @@
 import { useBleeps } from '@arwes/react';
-import { BleepNames } from '../settings';
+import type { BleepNames } from '@/settings';
 
 const Clickable = (props: {
 	children: React.ReactNode;

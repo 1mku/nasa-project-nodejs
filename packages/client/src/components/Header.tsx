@@ -1,8 +1,9 @@
-import { Text, Animated } from '@arwes/react';
-import { Link } from 'react-router-dom';
-import fav from '/favicon.png';
 import { useCallback } from 'react';
+import { Link } from 'react-router-dom';
+import { Text, Animated } from '@arwes/react';
+
 import useSound from '../hooks/useSound';
+import fav from '/favicon.png';
 
 const links = [
 	{
